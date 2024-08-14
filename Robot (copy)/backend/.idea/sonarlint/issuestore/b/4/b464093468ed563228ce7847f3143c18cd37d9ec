@@ -1,11 +1,0 @@
-
-m
-java:S36554"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(êÿÈú8²ŽŠŸ‹1
-m
-java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÍË¤Ï8³ŽŠŸ‹1
-J
-java:S1481"(Remove this unused "url" local variable.(Ã­ã›úÿÿÿÿ8¿ŽŠŸ‹1
-O
-java:S1481"-Remove this unused "password" local variable.(½¶¦üÿÿÿÿÿ8ÁŽŠŸ‹1
-H
-java:S1075"&Remove this hard-coded path-delimiter.(Ãþ­Õúÿÿÿÿ8ÁŽŠŸ‹1

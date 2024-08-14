@@ -1,8 +1,0 @@
-
-n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(îõÕûÿÿÿÿ8í“ŠŸ‹1
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¨×Ëúÿÿÿÿ8–”ŠŸ‹1
-a
-java:S1612#"?Replace this lambda with method reference 'TestCaseRow::getId'.(€Ûßºûÿÿÿÿ8”ŠŸ‹1
-U	java:S106%"9Replace this use of System.out or System.err by a logger.(€à…¾8Ÿ”ŠŸ‹1
-U	java:S106&"9Replace this use of System.out or System.err by a logger.(øÎ—È8 ”ŠŸ‹1
-Z	java:S106)"9Replace this use of System.out or System.err by a logger.(¨×Ëúÿÿÿÿ8¡”ŠŸ‹1

@@ -1,8 +1,0 @@
-
-k	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ôÃøÿÿÿÿ
-„
-java:S1488-"iImmediately return this expression instead of assigning it to the temporary variable "savedTestSuiteDto".(ö¥ÈÎıÿÿÿÿ
-m
-java:S6204""RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ööòıÿÿÿÿ
-[
-java:S46848"@Replace this persistent entity with a simple POJO or DTO object.(· óëúÿÿÿÿ

@@ -1,16 +1,10 @@
-# Pour les projets Angular
-mon-projet-angular-spring/mon-projet-angular/node_modules/
-mon-projet-angular-spring/mon-projet-angular/dist/
+# Fichiers de configuration de l'IDE
+.idea/
+*.iml
 
-# Pour les projets Spring
-mon-projet-angular-spring/mon-projet-spring/target/
-mon-projet-angular-spring/mon-projet-spring/.idea/
-mon-projet-angular-spring/mon-projet-spring/*.iml
-
-# Pour les projets Selenium
-mon-projet-selenium/target/
-mon-projet-selenium/.idea/
-mon-projet-selenium/*.iml
+# Dossiers de build
+target/
+dist/
 
 # Fichiers système
 .DS_Store
