@@ -1,0 +1,110 @@
+<div class="grid" style="height: calc(100%);margin-top: 0; margin-right: 0;">
+  <aside>
+    <div class="buttons">
+      <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary"
+              (click)="showTestSuiteSaveDialog()"></button>
+      <button pButton pRipple type="button" icon="pi pi-cog"
+              class="p-button-rounded p-button-secondary float-right"></button>
+    </div>
+    <div>
+      <ul class="testSuite">
+        <div class="testSuiteContainer" *ngFor="let item of itemList">
+          <li>
+            <div class="test-suite-name" (click)="item.enabled=!item.enabled">
+                            <span style="width:10px;display:inline-block">
+                                {{item.enabled ? "-" : "+"}}
+                            </span>
+              {{item.testSuite.name}}
+            </div>
+            <div class="test-suite-icons">
+              <i class="pi pi-plus" (click)="showTestCaseSaveDialog(item.testSuite)"></i>
+              <i class="pi pi-pencil" (click)="showTestSuiteSaveDialog(item.testSuite)"></i>
+              <i class="pi pi-trash" (click)="deleteTestSuite(item.testSuite.id)"></i>
+            </div>
+          </li>
+          <ul [ngClass]="!item.enabled ? 'inactive-test-suite' : 'active-test-suite'">
+            <li *ngFor="let testCase of item.testSuite.testCases"
+                [ngClass]="{'selected-testcase': selectedTestCase!=null && selectedTestCase.id==testCase.id}"
+                (click)="selectTestCase(testCase,item.testSuite)">{{testCase.name}}
+              <div class="test-suite-icons">
+                <i class="pi pi-copy" (click)="showTestCaseCloneSaveDialog(item.testSuite)"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+  </aside>
+  <div class="container">
+    <app-test-case (deleteTestCaseEvent)="deleteTestCase($event)" [testSuite]="selectedTestSuite" [testCase]="selectedTestCase"></app-test-case>
+  </div>
+</div>
+
+<p-dialog header="Add Test Case" [(visible)]="displayModal" [modal]="true" [style]="{width: '450px'}" [draggable]="true"
+          [resizable]="false">
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Name :</label>
+    <input class="col-12 md:col-8" class="ng-invalid ng-dirty"
+           [ngClass]="{'ng-invalid ng-dirty': !validTestCaseName()}" type="text" pInputText [(ngModel)]="testCaseName">
+  </div>
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Test Suite :</label>
+    <p-dropdown [required]="true" [options]="testSuiteList" [(ngModel)]="selectedTestSuite" optionLabel="name"
+                [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Test Suite">
+      <ng-template pTemplate="selectedItem">
+        <div>{{selectedTestSuite.name}}</div>
+      </ng-template>
+      <ng-template let-testSuite pTemplate="item">
+        <div>{{testSuite.name}}</div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+  <ng-template pTemplate="footer">
+    <button icon="pi pi-times" (click)="displayModal=false" label="Cancel" pButton pRipple type="button"
+            class="p-button-danger"></button>
+    <button icon="pi pi-check" (click)="saveTestCase()" label="Save" pButton pRipple type="button"
+            class="p-button-primary"></button>
+  </ng-template>
+</p-dialog>
+
+<p-dialog header="Test Suite" [(visible)]="displayTestSuiteModal" [modal]="true" [style]="{width: '450px'}" [draggable]="true"
+          [resizable]="false">
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Name :</label>
+    <input class="col-12 md:col-8" class="ng-invalid ng-dirty"
+           [ngClass]="{'ng-invalid ng-dirty': !validTestSuiteName()}" type="text" pInputText [(ngModel)]="testSuiteName">
+  </div>
+  <ng-template pTemplate="footer">
+    <button icon="pi pi-times" (click)="displayTestSuiteModal=false" label="Cancel" pButton pRipple type="button"
+            class="p-button-danger"></button>
+    <button icon="pi pi-check" (click)="saveOrUpdateTestSuite()" label="Save" pButton pRipple type="button"
+            class="p-button-primary"></button>
+  </ng-template>
+</p-dialog>
+<p-dialog header="Add cloned test case" [(visible)]="displayTestcase" [modal]="true" [style]="{width: '450px'}" [draggable]="true"
+          [resizable]="false">
+
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Test Suite :</label>
+    <p-dropdown [required]="true" [options]="testSuiteList" [(ngModel)]="selectedTestSuite" optionLabel="name"
+                [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Test Suite">
+      <ng-template pTemplate="selectedItem">
+        <div>{{selectedTestSuite.name}}</div>
+      </ng-template>
+      <ng-template let-testSuite pTemplate="item">
+        <div>{{testSuite.name}}</div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Name :</label>
+    <input class="col-12 md:col-8" class="ng-invalid ng-dirty"
+           [ngClass]="{'ng-invalid ng-dirty': !validTestCaseName()}" type="text" pInputText [(ngModel)]="testCaseName">
+  </div>
+  <ng-template pTemplate="footer">
+    <button icon="pi pi-times" (click)="displayTestcase=false" label="Cancel" pButton pRipple type="button"
+            class="p-button-danger"></button>
+    <button icon="pi pi-check" (click)="saveTestCaseClone()" label="Save" pButton pRipple type="button"
+            class="p-button-primary"></button>
+  </ng-template>
+</p-dialog>

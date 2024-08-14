@@ -1,0 +1,158 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData @angular/animations
+20 silly mapToRegistry name @angular/animations
+21 silly mapToRegistry scope (from package name) @angular
+22 verbose mapToRegistry no registry URL found in name for scope @angular
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fanimations
+26 silly fetchNamedPackageData @angular/cdk
+27 silly mapToRegistry name @angular/cdk
+28 silly mapToRegistry scope (from package name) @angular
+29 verbose mapToRegistry no registry URL found in name for scope @angular
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcdk
+33 silly fetchNamedPackageData @angular/common
+34 silly mapToRegistry name @angular/common
+35 silly mapToRegistry scope (from package name) @angular
+36 verbose mapToRegistry no registry URL found in name for scope @angular
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcommon
+40 silly fetchNamedPackageData @angular/compiler
+41 silly mapToRegistry name @angular/compiler
+42 silly mapToRegistry scope (from package name) @angular
+43 verbose mapToRegistry no registry URL found in name for scope @angular
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcompiler
+47 silly fetchNamedPackageData @angular/core
+48 silly mapToRegistry name @angular/core
+49 silly mapToRegistry scope (from package name) @angular
+50 verbose mapToRegistry no registry URL found in name for scope @angular
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fcore
+54 silly fetchNamedPackageData @angular/forms
+55 silly mapToRegistry name @angular/forms
+56 silly mapToRegistry scope (from package name) @angular
+57 verbose mapToRegistry no registry URL found in name for scope @angular
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fforms
+61 silly fetchNamedPackageData @angular/platform-browser
+62 silly mapToRegistry name @angular/platform-browser
+63 silly mapToRegistry scope (from package name) @angular
+64 verbose mapToRegistry no registry URL found in name for scope @angular
+65 silly mapToRegistry using default registry
+66 silly mapToRegistry registry https://registry.npmjs.org/
+67 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fplatform-browser
+68 silly fetchNamedPackageData @angular/platform-browser-dynamic
+69 silly mapToRegistry name @angular/platform-browser-dynamic
+70 silly mapToRegistry scope (from package name) @angular
+71 verbose mapToRegistry no registry URL found in name for scope @angular
+72 silly mapToRegistry using default registry
+73 silly mapToRegistry registry https://registry.npmjs.org/
+74 silly mapToRegistry uri https://registry.npmjs.org/@angular%2fplatform-browser-dynamic
+75 silly fetchNamedPackageData @angular/router
+76 silly mapToRegistry name @angular/router
+77 silly mapToRegistry scope (from package name) @angular
+78 verbose mapToRegistry no registry URL found in name for scope @angular
+79 silly mapToRegistry using default registry
+80 silly mapToRegistry registry https://registry.npmjs.org/
+81 silly mapToRegistry uri https://registry.npmjs.org/@angular%2frouter
+82 silly fetchNamedPackageData @fortawesome/fontawesome-free
+83 silly mapToRegistry name @fortawesome/fontawesome-free
+84 silly mapToRegistry scope (from package name) @fortawesome
+85 verbose mapToRegistry no registry URL found in name for scope @fortawesome
+86 silly mapToRegistry using default registry
+87 silly mapToRegistry registry https://registry.npmjs.org/
+88 silly mapToRegistry uri https://registry.npmjs.org/@fortawesome%2ffontawesome-free
+89 silly fetchNamedPackageData @ng-bootstrap/ng-bootstrap
+90 silly mapToRegistry name @ng-bootstrap/ng-bootstrap
+91 silly mapToRegistry scope (from package name) @ng-bootstrap
+92 verbose mapToRegistry no registry URL found in name for scope @ng-bootstrap
+93 silly mapToRegistry using default registry
+94 silly mapToRegistry registry https://registry.npmjs.org/
+95 silly mapToRegistry uri https://registry.npmjs.org/@ng-bootstrap%2fng-bootstrap
+96 silly fetchNamedPackageData primeflex
+97 silly mapToRegistry name primeflex
+98 silly mapToRegistry using default registry
+99 silly mapToRegistry registry https://registry.npmjs.org/
+100 silly mapToRegistry uri https://registry.npmjs.org/primeflex
+101 silly fetchNamedPackageData primeicons
+102 silly mapToRegistry name primeicons
+103 silly mapToRegistry using default registry
+104 silly mapToRegistry registry https://registry.npmjs.org/
+105 silly mapToRegistry uri https://registry.npmjs.org/primeicons
+106 silly fetchNamedPackageData primeng
+107 silly mapToRegistry name primeng
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry https://registry.npmjs.org/
+110 silly mapToRegistry uri https://registry.npmjs.org/primeng
+111 silly fetchNamedPackageData rxjs
+112 silly mapToRegistry name rxjs
+113 silly mapToRegistry using default registry
+114 silly mapToRegistry registry https://registry.npmjs.org/
+115 silly mapToRegistry uri https://registry.npmjs.org/rxjs
+116 silly fetchNamedPackageData tslib
+117 silly mapToRegistry name tslib
+118 silly mapToRegistry using default registry
+119 silly mapToRegistry registry https://registry.npmjs.org/
+120 silly mapToRegistry uri https://registry.npmjs.org/tslib
+121 silly fetchNamedPackageData zone.js
+122 silly mapToRegistry name zone.js
+123 silly mapToRegistry using default registry
+124 silly mapToRegistry registry https://registry.npmjs.org/
+125 silly mapToRegistry uri https://registry.npmjs.org/zone.js
+126 verbose get https://registry.npmjs.org/@angular%2fanimations not expired, no request
+127 verbose stack Error: Missing required argument #1
+127 verbose stack     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+127 verbose stack     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+127 verbose stack     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+127 verbose stack     at /usr/share/npm/lib/install/deps.js:457:7
+127 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+127 verbose stack     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+127 verbose stack     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+127 verbose stack     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+127 verbose stack     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+127 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+128 verbose cwd /home/alajilani/Robot/frontend/robot
+129 error Linux 4.15.0-213-generic
+130 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+131 error node v8.10.0
+132 error npm  v3.5.2
+133 error code EMISSINGARG
+134 error typeerror Error: Missing required argument #1
+134 error typeerror     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+134 error typeerror     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+134 error typeerror     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+134 error typeerror     at /usr/share/npm/lib/install/deps.js:457:7
+134 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+134 error typeerror     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+134 error typeerror     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+134 error typeerror     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+134 error typeerror     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+134 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+135 error typeerror This is an error with npm itself. Please report this error at:
+135 error typeerror     <http://github.com/npm/npm/issues>
+136 verbose exit [ 1, true ]

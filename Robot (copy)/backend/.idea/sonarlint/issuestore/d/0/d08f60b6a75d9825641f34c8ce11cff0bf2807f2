@@ -1,0 +1,21 @@
+
+2
+java:S1643:"Use a StringBuilder instead.(‹š®è
+7
+java:S1643;"Use a StringBuilder instead.(ÀÈÖÙúÿÿÿÿ
+2
+java:S1643E"Use a StringBuilder instead.(ø‹±ª
+7
+java:S1643H"Use a StringBuilder instead.(ßÍ–÷ýÿÿÿÿ
+2
+java:S1643K"Use a StringBuilder instead.(‚éü’
+7
+java:S1643N"Use a StringBuilder instead.(ßä·ƒûÿÿÿÿ
+\
+java:S2259B"AA "NullPointerException" could be thrown; "row" is nullable here.(€‘óÝþÿÿÿÿ
+f
+java:S36555"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(›ÀÂÀ
+k	java:S116"QRename this field "HEADER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°¤£îøÿÿÿÿ
+h
+java:S37764"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÍÍ‡ù
+S	java:S106@"9Replace this use of System.out or System.err by a logger.(Âû¯Ðüÿÿÿÿ

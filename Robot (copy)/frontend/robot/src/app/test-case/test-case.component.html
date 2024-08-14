@@ -1,0 +1,99 @@
+<div style="height: 100%;">
+  <p-tabView>
+    <p-tabPanel header="Test Case">
+      <div class="grid" *ngIf="this.testCase!=null">
+        <div class="col-12  test-case-header">
+
+          <input class="test-case-name" type="text" pInputText [(ngModel)]="testCaseName">
+
+          <div class="buttons">
+              <div class="col-12">
+                  <!-- ... -->
+                  <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+                  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+              </div>
+            <p-button label="Save" (click)="this.saveTestCase()"></p-button>
+            <button pButton pRipple type="button" (click)="deleteTestCase()" label="Delete"
+              class="p-button-danger"></button>
+            <p-button label="Execute" (click)="this.executeTestCase()"></p-button>
+          </div>
+          <div class="test-suite-icons">
+            <input    style="width: 270px;"  value={{copiedtext}} type="text" #input/>
+            <i class="pi pi-copy" (click)="ClipBoardCopy(input)"></i>
+          </div>
+        </div>
+        <div class="col-2  drag-column">
+          <p-accordion [multiple]="true">
+            <p-accordionTab  *ngFor="let library of libraries" [header]="library.name">
+              <div *ngFor="let func of library.functions">
+                <div class="function p-component" pDraggable="functions" (onDragStart)="dragStart(func)"
+                  (onDragEnd)="dragEnd()">
+                  {{func.name}}
+                </div>
+              </div>
+            </p-accordionTab>
+          </p-accordion>
+        </div>
+        <div class="col-10 drop-column" [pDroppable]="['functions','row']" (onDrop)="drop($event,-1)">
+          <p-table [scrollable]="true" scrollHeight="calc(90vh)" [value]="updatedTestCase.updatedTestCaseRows">
+            <ng-template pTemplate="header">
+              <tr>
+                <th class="function-cell">Function</th>
+                <th>Parameters</th>
+                <th class="button-cell"></th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-testRow let-rowIndex="rowIndex">
+              <tr [pDroppable]="['functions','row']" (onDrop)="drop($event,rowIndex)">
+                <td class="function-cell" pDraggable="row" (onDragStart)="dragStartRow(testRow)"
+                  (onDragEnd)="dragEndRow()">{{testRow.testCaseRow.function.name}}</td>
+                <td>
+                    <div style="display: inline-block;"
+                         *ngFor="let label of testRow.testCaseRow.function.parameters; let index=index;">
+                        <label style="margin-right: 10px;">{{label}}</label>
+
+                        <ng-container *ngIf="label !== 'role_name' && label !== 'permission_name' && label !== 'USER_FirstName' && label !== 'USER_LastName' ">
+                            <input (focusout)="updateTestCaseRow(testRow)"
+                                   style="margin-right: 10px;"
+                                   [(ngModel)]="testRow.testCaseRow.parameterValues[index]"
+                                   type="text"
+                                   pInputText />
+                        </ng-container>
+
+                        <ng-container *ngIf="label === 'role_name' || label==='permission_name'|| label==='USER_FirstName' || label==='USER_LastName' ">
+                            <br>
+                            <p-dropdown (focusout)="updateTestCaseRow(testRow)"
+                                        [style]="{'width': '210px'}"
+                                        [(ngModel)]="testRow.testCaseRow.parameterValues[index]"
+                                        [options]="getOptionsList(label)"
+                                        optionLabel="label"
+                                        optionValue="value">
+                                <ng-template pTemplate="selectedItem" let-option>
+                                    {{option.label}}
+                                </ng-template>
+                                <ng-template pTemplate="item" let-option>
+                                    {{option.label}}
+                                </ng-template>
+                            </p-dropdown>
+
+                        </ng-container>
+                    </div>
+
+
+                </td>
+                <td class="button-cell">
+                  <button pButton pRipple (click)="deleteTestCaseRow(testRow)" type="button" icon="pi pi-trash"
+                    class="p-button-rounded p-button-danger float-right"></button>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Report">
+      <iframe id="report"></iframe>
+    </p-tabPanel>
+  </p-tabView>
+</div>

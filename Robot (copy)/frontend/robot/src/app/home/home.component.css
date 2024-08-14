@@ -1,0 +1,101 @@
+p-tieredmenu:first-child ::ng-deep .p-tieredmenu{
+    padding-top: 0.75rem;
+    position: absolute;
+    top:0;
+}
+aside{
+    width: 12.5rem;
+}
+aside  p-tieredmenu:nth-child(2){
+    position: absolute;
+    bottom: 0;
+
+}
+p-tieredmenu ::ng-deep .p-tieredmenu{
+    border: 0;
+    background-color: #4299c9;
+}
+p-tieredmenu ::ng-deep p-tieredmenusub ul{
+    border: 0;
+    background-color: #4299c9!important;
+}
+p-tieredmenu ::ng-deep .p-tieredmenu .p-menuitem-link{
+    color: white !important;
+}
+p-tieredmenu ::ng-deep  .p-tieredmenu .p-menuitem-text{
+    color: inherit !important;
+}
+p-tieredmenu ::ng-deep .p-tieredmenu .p-menuitem-icon{
+    color: white !important;
+}
+p-tieredmenu ::ng-deep a:hover{
+    background-color: #eb6e1f !important;
+    color: white;
+}
+p-tieredmenu ::ng-deep .p-menuitem-link:focus{
+    box-shadow: none;
+}
+
+p-tieredmenu ::ng-deep a:hover .p-menuitem-text{
+    color: white !important;
+}
+p-tieredmenu ::ng-deep a:hover .p-menuitem-icon{
+    color: white !important;
+}
+
+p-tieredmenu:nth-child(2) ::ng-deep p-tieredmenusub[root="root"] > ul > .p-menuitem:last-child > a > .p-menuitem-text{
+    color: inherit;
+    margin: auto;
+    background: #eb6e1f;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+p-tieredmenu:nth-child(2)  ::ng-deep p-tieredmenusub[root="root"] > ul > .p-menuitem:last-child > a{
+    padding: 5px;
+}
+aside{
+    height: 100%;
+    float: left;
+    background-color: #4299c9;
+}
+.side-menus{
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    padding: 2px 0;
+}
+
+p-tieredmenu ::ng-deep .p-menuitem-link{
+    background:#4299c9 ! important;
+}
+.side-menus p-tieredmenu ::ng-deep .p-tieredmenu{
+    padding: 0;
+}
+p-tieredmenu ::ng-deep .p-tieredmenu .p-menuitem-active>p-tieredmenusub>.p-submenu-list {
+    top:unset !important;
+    bottom: 0;
+    border-radius: 5px;
+    left: 101% !important;
+}
+p-tieredmenu:nth-child(2) ::ng-deep p-tieredmenusub[root="root"] > ul > .p-menuitem:last-child > a > .p-submenu-icon{
+    display: none;
+}
+.alert{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+.success{
+    background-color:#c8e6c9;
+}
+.error{
+    background-color:#c8e6c9;
+}
+.hide{
+    display: none;
+}

@@ -1,0 +1,74 @@
+.login-container {
+  flex: 1; /* Pour occuper l'espace restant */
+  max-width: 900px;
+  margin: 50px auto 30px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-subSection.center {
+  max-width: 500px; /* Ajustez la largeur maximale selon vos besoins */
+  margin: auto; /* Pour centrer horizontalement */
+  padding: 30px; /* Ajoute un padding pour l'espace intérieur */
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Position relative pour utiliser top */
+  top: 140px; /* Décalage vers le bas */
+}
+
+
+.login-container h4 {
+  text-align: center;
+  color: #4299c9;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.form-group {
+  margin-bottom: 40px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4299c9;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+  border-color: #4299c9;
+}
+
+.form-group .p-checkbox {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.content-subSection button[type="button"] {
+  width: 100%;
+  background-color: #eb6e1f;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+}

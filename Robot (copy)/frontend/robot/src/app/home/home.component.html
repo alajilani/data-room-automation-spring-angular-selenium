@@ -1,0 +1,16 @@
+<div class="alert" [ngClass]="{'success': alert.status=='success','error': alert.status=='error','hide':!show}">
+  <p-message [severity]="alert.status" [text]="alert.text" styleClass="mr-2"></p-message>
+  <i class="pi pi-times" style="margin: 9px 8px 0 0;cursor: pointer;" (click)="show=false"></i>
+</div>
+<div style="height: 100%;">
+  <aside >
+    <p-tieredMenu [model]="topItems" ></p-tieredMenu>
+    <p-tieredMenu [model]="bottomItems" ></p-tieredMenu>
+  </aside>
+  <router-outlet>
+  </router-outlet>
+  </div>
+
+
+
+

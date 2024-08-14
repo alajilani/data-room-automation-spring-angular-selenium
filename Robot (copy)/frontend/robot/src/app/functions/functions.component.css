@@ -1,0 +1,79 @@
+.buttons{
+    float: right;
+
+}
+.custom-update-button{
+    width: 80px;
+
+    background-color: #eb6e1f;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.title{
+    font-size: 30px;
+    padding: 2px;
+    padding-left: 10px;
+    border: none;
+}
+.header{
+    padding: 20px 12px;
+    border-bottom: 1px solid;
+    margin: 0 8px;
+    width: calc(100% - 8px);
+}
+.header div{
+    display: inline-block;
+}
+
+/***************/
+
+
+
+
+
+
+.sub-header {
+    text-align: center;
+    background-color: #4299c9;
+    color: white;
+    font-size: 20px;
+    padding: 2px 0;
+    margin-bottom: 5px;
+}
+
+p-card ::ng-deep .p-card {
+    margin: 5px 0;
+}
+
+/******  table  ******/
+
+p-table ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    color: white;
+    background-color: #191d35;
+}
+
+p-table ::ng-deep .p-datatable-wrapper {
+    border-radius: 5px;
+    border: 1px solid #191d35;
+    border-bottom: 0;
+}
+
+p-table ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+    border-bottom: 1px solid #191d35;
+}
+
+.success-message {
+    color: green;
+    margin-top: 1rem;
+}
+
+.error-message {
+    color: red;
+    margin-top: 1rem;
+}

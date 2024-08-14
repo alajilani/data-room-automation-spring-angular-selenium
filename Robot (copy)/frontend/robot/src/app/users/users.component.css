@@ -1,0 +1,77 @@
+.buttons{
+    float: right;
+}
+.buttons p-button{
+    margin-right: 10px;
+}
+.buttons button{
+    margin-right: 10px;
+}
+.title{
+    font-size: 30px;
+    padding: 2px;
+    padding-left: 10px;
+    border: none;
+}
+.header{
+    padding: 20px 12px;
+    border-bottom: 1px solid;
+    margin: 0 8px;
+    width: calc(100% - 8px);
+}
+.header div{
+    display: inline-block;
+}
+.grid{
+    margin-top: 0;
+    width: 100%;
+}
+.form-group{
+    padding-bottom: 5px;
+    margin: 0;
+}
+p-dialog ::ng-deep .p-dialog-content{
+    padding-top: 37px;
+    overflow: visible;
+}
+p-dialog ::ng-deep .p-dialog-header{
+    padding: 17px 24px;
+    border-bottom: 2px solid gray;
+    background: aliceblue;
+}
+p-dialog ::ng-deep .p-multiselect{
+    width: 14rem;
+}
+.hide-password{
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+.show-password{
+        max-height: 100vh;
+        transition: max-height 0.5s ease-in;  
+        overflow: hidden;  
+}
+p-table ::ng-deep .p-datatable .p-datatable-thead > tr > th{
+    color: white;
+    background-color: #191d35;
+}
+
+p-table ::ng-deep .p-datatable-wrapper{
+    border-radius: 5px;
+}
+p-table ::ng-deep .p-datatable .p-datatable-tbody > tr > td{
+    border-bottom: 1px solid #191d35;
+}
+p-table ::ng-deep .p-datatable .p-datatable-tbody > tr > td:first-child{
+    border-left: 1px solid #191d35;
+}
+p-table ::ng-deep .p-datatable .p-datatable-tbody > tr > td:last-child{
+    border-right: 1px solid #191d35;
+}
+p-table ::ng-deep .p-datatable .p-datatable-tbody > tr:last-child > td:first-child{
+    border-bottom-left-radius: 5px;
+}
+p-table ::ng-deep .p-datatable .p-datatable-tbody > tr:last-child > td:last-child{
+    border-bottom-right-radius: 5px;
+}

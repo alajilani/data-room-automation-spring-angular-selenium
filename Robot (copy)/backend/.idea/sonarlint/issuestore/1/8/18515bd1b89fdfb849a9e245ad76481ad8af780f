@@ -1,0 +1,13 @@
+
+=
+java:S1185'"(Remove this method to simply inherit it.(ªÿ›
+
+java:S4601;"fReorder the URL patterns from most to less specific, the pattern "/auth/**" should occurs before "**".(óñ¼úüÿÿÿÿ
+‡
+java:S4601;"lReorder the URL patterns from most to less specific, the pattern "/swagger-ui/**" should occurs before "**".(óñ¼úüÿÿÿÿ
+ˆ
+java:S4601;"mReorder the URL patterns from most to less specific, the pattern "/v3/api-docs/**" should occurs before "**".(óñ¼úüÿÿÿÿ
+ƒ
+java:S4601;"hReorder the URL patterns from most to less specific, the pattern "/api/v1/**" should occurs before "**".(óñ¼úüÿÿÿÿ
+
+java:S4601;"fReorder the URL patterns from most to less specific, the pattern "/user/**" should occurs before "**".(óñ¼úüÿÿÿÿ

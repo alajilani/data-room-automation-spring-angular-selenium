@@ -1,0 +1,25 @@
+<div style="display: flex; height: 100vh;">
+    <!-- Section du formulaire de connexion à gauche -->
+    <div class="login-container">
+        <div class="content-subSection center">
+            <h4>Sign In</h4>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" pInputText placeholder="Enter your username" [(ngModel)]="loginInfo.username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" pInputText placeholder="Enter your password" [(ngModel)]="loginInfo.password">
+            </div>
+            <div class="form-group">
+                <p-checkbox [(ngModel)]="loginInfo.stayLoggedin" [binary]="true" inputId="staylogged"></p-checkbox>
+                <label for="staylogged">Remember me</label>
+            </div>
+            <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+            <button type="button" (click)="login()"  style="background-color: #eb6e1f; color: white;">Login</button>
+        </div>
+    </div>
+
+    <!-- Section de l'image sur la droite -->
+    <div style="flex: 1; background-image: url('assets/robotlogin1.jpg'); background-size: cover; background-position: center;"></div>
+</div>

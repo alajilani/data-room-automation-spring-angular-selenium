@@ -1,0 +1,70 @@
+<div class="grid">
+    <div class="col-12 header">
+        <div class="title">Functions</div>
+        <div class="buttons">
+            <button class="custom-update-button" (click)="updateFunctions()">Update <i class="pi pi-sync"></i></button>
+        </div>
+    </div>
+    <div class="col-12">
+        <!-- ... -->
+        <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        <!-- ... -->
+    </div>
+    <div style="overflow: auto;" class="col-12">
+        <div class="sub-header">Missing Functions</div>
+        <div *ngFor="let missingFunction of missingFunctions">
+            <div class="grid">
+                <div class="col-6">
+                    <table class="custom-table">
+                        <thead>
+                        <tr>
+                            <th>
+                                <select [(ngModel)]="missingFunction.newFunction" (change)="onFunctionSelectionChange(missingFunction)">
+                                    <option *ngFor="let option of newFunctions" [value]="option">{{ option.name }}</option>
+                                </select>
+                            </th>
+                            <th>{{ missingFunction.missingFunction.name }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let parameter of missingFunction.newFunction.parameters; let i = index">
+                            <td>{{ parameter }}</td>
+                            <td>
+                                <select [(ngModel)]="missingFunction.parameterMapping[i]">
+                                    <option *ngFor="let param of missingFunction.missingFunction.parameters.concat(['default'])" [value]="param">{{ param }}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">Updated Functions</div>
+        <div *ngFor="let changedFunction of changedFunctions">
+            <div class="grid">
+                <div class="col-6">
+                    <table class="custom-table">
+                        <thead>
+                        <tr>
+                            <th>New Parameters</th>
+                            <th>Old Parameters</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let parameter of changedFunction.newParameters; let i = index">
+                            <td>{{ parameter }}</td>
+                            <td>
+                                <select [(ngModel)]="changedFunction.parameterMapping[i]">
+                                    <option *ngFor="let param of changedFunction.oldParameters.concat(['default'])" [value]="param">{{ param }}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

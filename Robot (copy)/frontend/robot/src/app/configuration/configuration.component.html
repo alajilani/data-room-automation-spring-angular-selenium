@@ -1,0 +1,31 @@
+<div class="grid">
+  <div class="col-12  header">
+    <div class="title">Configuration</div>
+    <div class="buttons">
+        <button class="custom-update-button" (click)="update()">Update <i class="pi pi-sync"></i></button>
+    </div>
+      <div class="col-12">
+          <!-- ... -->
+          <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+          <!-- ... -->
+      </div>
+  </div>
+  <div style="overflow: auto;max-height: calc(100vh - 80px);padding-left: 25px;" class="col-12">
+    <div class="form-group grid">
+      <label class="col-12 md:col-2 label">Project :</label>
+      <input class="col-12 md:col-1" type="text" pInputText [(ngModel)]="configuration.projectName">
+    </div>
+    <div class="form-group grid">
+      <label class="col-12 md:col-2 label">Git URL :</label>
+      <input class="col-12 md:col-8" type="text" pInputText [(ngModel)]="configuration.url">
+    </div>
+    <div class="form-group grid">
+      <label class="col-12 md:col-2 label">Git Password :</label>
+      <input class="col-12 md:col-1" type="password" pInputText [(ngModel)]="configuration.password">
+    </div>
+
+
+  </div>
+
+</div>

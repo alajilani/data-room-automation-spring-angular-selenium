@@ -1,0 +1,53 @@
+.buttons{
+    float: right;
+}
+.custom-update-button{
+    width: 80px;
+
+    background-color: #eb6e1f;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.title{
+    font-size: 30px;
+    padding: 2px;
+    padding-left: 10px;
+    border: none;
+}
+.header{
+    padding: 20px 12px;
+    border-bottom: 1px solid;
+    margin: 0 8px;
+    width: calc(100% - 8px);
+    margin-bottom: 20px;
+}
+.header div{
+    display: inline-block;
+}
+
+
+label{
+    padding-right:10px;
+    width: auto !important;
+}
+.form-group{
+    padding-bottom: 5px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    color: green;
+    margin-top: 1rem;
+}
+
+.error-message {
+    color: red;
+    margin-top: 1rem;
+}

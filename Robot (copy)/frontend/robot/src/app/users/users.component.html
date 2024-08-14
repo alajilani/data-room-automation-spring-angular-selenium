@@ -1,0 +1,124 @@
+<div class="grid">
+  <div class="col-12  header">
+    <div class="title">Users</div>
+    <div class="buttons">
+      <p-button label="Add User" (click)="this.showAddUserDialog()"></p-button>
+    </div>
+  </div>
+  <div class="col-12">
+    <p-table #dt [value]="users" [scrollable]="true" scrollHeight="calc(100vh - 1rem - 138px)" [rowHover]="true"
+      [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading"
+      responsiveLayout="scroll" [paginator]="true"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>
+            <div class="flex justify-content-between align-items-center">
+              First Name
+            </div>
+          </th>
+          <th>
+            <div class="flex justify-content-between align-items-center">
+              Last Name
+            </div>
+          </th>
+          <th>
+            <div class="flex justify-content-between align-items-center">
+              Username
+            </div>
+          </th>
+          <th>
+            <div class="flex justify-content-between align-items-center">
+              Roles
+            </div>
+          </th>
+          <th style="max-width: 8rem"></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user>
+        <tr class="p-selectable-row">
+          <td>
+            <span class="p-column-title">First Name</span>
+            {{user.firstName}}
+          </td>
+          <td>
+            <span class="p-column-title">Last Name</span>
+            {{user.lastName}}
+          </td>
+
+          <td>
+            <span class="p-column-title">Username</span>
+            {{user.username}}
+          </td>
+          <td>
+            <span class="p-column-title">Roles</span>
+            <span class="image-text">{{this.userRolesToString(user.roles)}}</span>
+          </td>
+          <td style="text-align: center;max-width: 8rem">
+            <button pButton style="margin-right: 10px;" type="button" class="p-button-primary" icon="pi pi-user-edit"
+              (click)="this.showEditUserDialog(user)"></button>
+            <button pButton type="button" class="p-button-danger" icon="pi pi-user-minus"
+              (click)="this.deleteUser(user)"></button>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="8">No users found.</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+</div>
+
+
+<p-dialog [header]="this.editUser ? 'Edit User':'Add User'" [(visible)]="displayAddUserModal" [modal]="true"
+  [style]="{width: '550px'}" [draggable]="true" [resizable]="false">
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">First Name :</label>
+    <input type="text" pInputText [(ngModel)]="userSave.firstName">
+  </div>
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Last Name :</label>
+    <input type="text" pInputText [(ngModel)]="userSave.lastName">
+  </div>
+
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Username :</label>
+    <input class="ng-invalid ng-dirty" [ngClass]="{'ng-invalid ng-dirty': !validUsername()}"
+      type="text" pInputText [(ngModel)]="userSave.username">
+  </div>
+  <div *ngIf="this.editUser" class="form-group grid">
+    <label class="col-12 md:col-4">Update password :</label>
+    <p-checkbox class="col-12 md:col-8" style="padding-left: 0;" [(ngModel)]="updatePassword" [binary]="true"
+      inputId="binary"></p-checkbox>
+  </div>
+
+  <div [ngClass]="this.editUser && !updatePassword ? 'hide-password' : 'show-password'"> 
+    <div class="form-group grid">
+
+      <label class="col-12 md:col-4">Password :</label>
+      <input class="ng-invalid ng-dirty" [ngClass]="{'ng-invalid ng-dirty': !validPassword()}"
+        type="password" pInputText [(ngModel)]="userSave.password">
+    </div>
+    <div class="form-group grid">
+
+      <label class="col-12 md:col-4">Confirm Password :</label>
+      <input class="ng-invalid ng-dirty" [ngClass]="{'ng-invalid ng-dirty': !confirmPassword()}"
+        type="password" pInputText [(ngModel)]="userSave.confirmPassword">
+
+    </div>
+  </div>
+  <div class="form-group grid">
+    <label class="col-12 md:col-4">Roles :</label>
+    <p-multiSelect [options]="roles" [(ngModel)]="userSave.roles" defaultLabel="Select a Role" optionLabel="name">
+    </p-multiSelect>
+  </div>
+  <ng-template pTemplate="footer">
+    <button icon="pi pi-times" (click)="displayAddUserModal=false" label="Cancel" pButton pRipple type="button"
+      class="p-button-danger"></button>
+    <button icon="pi pi-check" (click)="saveOrUpdateUser()" label="Save" pButton pRipple type="button"
+      class="p-button-primary"></button>
+  </ng-template>
+</p-dialog>

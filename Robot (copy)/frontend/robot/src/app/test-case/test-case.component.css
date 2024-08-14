@@ -1,0 +1,138 @@
+.drag-column {
+    background: #f8f9fa;
+    background-clip: content-box;
+    border-right: 2px solid #dbdcdd;
+    border-top: 1px solid transparent;
+    height: calc(100vh - 128px - 1.5rem);
+    max-height: calc(100vh - 128px - 1.5rem);
+    overflow: overlay;
+    padding: 0 !important;
+    padding-right: 15px !important;
+}
+
+.drop-column {
+    border: 1px solid transparent;
+    transition: border-color .2s;
+    height: calc(100vh - 128px - 1.5rem);
+    max-height: calc(100vh - 128px - 1.5rem);
+    padding: 0;
+    margin: 0;
+
+
+}
+.p-draggable-enter {
+    border-color: var(--primary-color); 
+}
+
+.function {
+	display: flex;
+	align-items: center;
+	padding: .5rem;
+    width: 100%;
+    border-bottom: 1px solid var(--surface-d);
+    color: #495057;
+    font-size: 1.2rem;
+}
+
+[pDraggable] {
+    cursor: move;
+}
+.grid{
+    height: 100%;
+}
+.test-case-header{
+    padding: 20px;
+}
+.test-case-title{
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+.buttons{
+    float: right;
+}
+.buttons p-button{
+    margin-right: 10px;
+}
+.buttons button{
+    margin-right: 10px;
+}
+
+p-table ::ng-deep tbody tr:last-child{
+    margin-bottom: 50px;
+}
+p-table ::ng-deep tbody tr td button{
+    margin-left: auto;
+}
+
+p-table ::ng-deep .p-datatable {
+    height: calc(100vh - 128px - 1.5rem) !important;
+}
+p-table ::ng-deep .p-datatable-wrapper {
+    height: calc(100vh - 128px - 1.5rem) !important;
+}
+p-table ::ng-deep table{
+    width: 100%;
+} 
+
+.function-cell{
+    max-width: 200px;
+    width: 200px;
+    min-width: 200px;
+}
+.button-cell{
+    max-width: 80px;
+    width: 80px;
+    min-width: 80px;
+
+}
+iframe{
+    height: 90vh;
+    width: 100%;
+}
+
+.test-case-name{
+    font-size: 30px;
+    padding: 2px;
+    padding-left: 10px;
+    border: none;
+}
+p-tabview ::ng-deep .p-tabview{
+    height: 100%;
+}
+p-tabview ::ng-deep .p-tabview-panels{
+    padding-bottom: 0;
+}
+
+p-table ::ng-deep td input{
+    width: 100px;
+    min-width: -webkit-fill-available;
+}
+p-table ::ng-deep td div{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+p-accordion ::ng-deep .p-accordion-header-link{
+    background-color: #eb6e1f !important;
+    color: white !important;
+}
+p-accordion ::ng-deep .p-accordion-header-link:focus{
+    box-shadow: none !important;
+}
+.test-suite-icons{
+    float: right;
+    margin-right: 8px;
+    margin-left: 4px;
+}
+
+
+.success-message {
+    color: green;
+    margin-top: 1rem;
+}
+.error-message {
+    color: red;
+    margin-top: 1rem;
+}
