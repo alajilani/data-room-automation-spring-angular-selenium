@@ -1,0 +1,18 @@
+# Pour les projets Angular
+mon-projet-angular-spring/mon-projet-angular/node_modules/
+mon-projet-angular-spring/mon-projet-angular/dist/
+
+# Pour les projets Spring
+mon-projet-angular-spring/mon-projet-spring/target/
+mon-projet-angular-spring/mon-projet-spring/.idea/
+mon-projet-angular-spring/mon-projet-spring/*.iml
+
+# Pour les projets Selenium
+mon-projet-selenium/target/
+mon-projet-selenium/.idea/
+mon-projet-selenium/*.iml
+
+# Fichiers système
+.DS_Store
+*.swp
+
